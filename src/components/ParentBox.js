@@ -16,12 +16,7 @@ export default class ParentBox extends React.Component {
     }
 
     //hakee kaikki sanat tietokannasta
-    componentDidMount = () => {
-        // this.socket = io('http://192.168.1.5:3000/')
-        // this.socket.on("arvattava", guess => {
-        //     this.setState({randomWord: [...this.state.randomWord, guess]})
-        // })
-        
+    componentDidMount = () => { 
         getAllWords().then(allWords => {
             this.setState({ allWords });
         }).catch(err => {
