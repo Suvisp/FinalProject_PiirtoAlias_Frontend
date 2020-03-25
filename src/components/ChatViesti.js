@@ -40,7 +40,7 @@ osuma = () => {
         console.log(this.state.points)
         // sessionStorage.setItem("points", this.state.points+1);
     });
-    console.log('tähän vielä joku funktio vuoron vaihtumisesta??') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
+    console.log('tähän vielä joku funktio vuoron vaihtumisesta???') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
 }
 
 
