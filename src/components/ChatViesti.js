@@ -38,7 +38,7 @@ osuma = () => {
     this.setState({points: this.state.points + 1}, () => { //kun arvaus menee oikein, lisätään yksi piste pointsin stateen.
         console.log(this.state.points)
     });
-    console.log('tähän vielä joku funktio vuoron vaihtumisesta?') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
+    console.log('tähän vielä joku funktio vuoron vaihtumisesta??') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
 }
 
 
