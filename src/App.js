@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import PrivateRoute from './components/PrivateRoute';
 import { useAuth0 } from "./react-auth0-spa";
+import './App.css';
 
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";

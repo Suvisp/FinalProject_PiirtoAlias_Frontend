@@ -1,7 +1,7 @@
 import React from 'react';
 import ChatViesti from './ChatViesti'
-import io from 'socket.io-client'
-import ArvattavaSana from './ArvattavaSana'
+//import io from 'socket.io-client' <- tämä socketBoxiin
+import ArvattavaSana from './ArvattavaSana' 
 import { getAllWords} from '../services/restClient'
 export default class ParentBox extends React.Component {
     constructor() {
@@ -54,27 +54,3 @@ export default class ParentBox extends React.Component {
         )
     }
 }
-
-// const styles = StyleSheet.create({
-//     toptext: {
-//         width: "60 %",
-//         textAlign: "center",
-//         left: "30 %",
-//         fontSize: 20,
-//         color: "black",
-//         letterSpacing: 1,
-//         textShadowRadius: 10,
-//         top: 0,
-//     },
-//     word: {
-//         width: "60 %",
-//         textAlign: "center",
-//         left: "30 %",
-//         fontSize: 20,
-//         textTransform: "uppercase",
-//         color: "black",
-//         letterSpacing: 1,
-//         textShadowRadius: 10,
-//         top: 0
-//     }
-// })
