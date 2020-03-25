@@ -15,7 +15,7 @@ export default class ChatViesti extends Component {
     }
 
 componentDidMount () {
-    this.socket = io('http://192.168.1.5:3000/') //avataan socket-yhteys kun sivu komponentti on latautunut
+    this.socket = io('http://localhost:3000/') //avataan socket-yhteys kun sivu komponentti on latautunut
     this.socket.on("chat message", msg  => {
         this.setState({chatMessages: [...this.state.chatMessages, msg]}) //lisätään lähetetty viesti chatMessages-arrayhyn
     })
@@ -40,7 +40,7 @@ osuma = () => {
         console.log(this.state.points)
         // sessionStorage.setItem("points", this.state.points+1);
     });
-    console.log('tähän vielä joku funktio vuoron vaihtumisesta???') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
+    console.log('tähän vielä joku funktio vuoron vaihtumisesta??') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
 }
 
 
