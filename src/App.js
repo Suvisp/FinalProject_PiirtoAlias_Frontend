@@ -6,6 +6,7 @@ import { useAuth0 } from "./react-auth0-spa";
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
+import ParentBox from "./components/ParentBox";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route path="/" exact />
           <PrivateRoute path="/profile" component={Profile} />  
+          <Route path="/parentBox" exact component={ParentBox} />
         </Switch>
       </Router>
     </div>
