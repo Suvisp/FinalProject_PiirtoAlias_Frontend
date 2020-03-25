@@ -1,0 +1,9 @@
+.tools {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
+  
+  input[type=number] {
+    width: 50px;
+  }

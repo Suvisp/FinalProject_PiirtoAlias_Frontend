@@ -1,7 +1,7 @@
 import React from 'react';
 import ChatViesti from './ChatViesti'
-import io from 'socket.io-client'
-import ArvattavaSana from './ArvattavaSana'
+//import io from 'socket.io-client' <- tämä socketBoxiin
+import ArvattavaSana from './ArvattavaSana' 
 import { getAllWords} from '../services/restClient'
 export default class ParentBox extends React.Component {
     constructor() {
