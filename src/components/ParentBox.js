@@ -1,17 +1,11 @@
 import NavBar from "./NavBar";
 import React from 'react';
-<<<<<<< HEAD
+
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
-=======
-import ChatViesti from './ChatViesti'
-//import io from 'socket.io-client' <- tämä socketBoxiin
-import ArvattavaSana from './ArvattavaSana' 
-import { getAllWords} from '../services/restClient'
-import Piirtoalusta from './Piirtoalusta';
->>>>>>> master
+
 export default class ParentBox extends React.Component {
     constructor() {
         super()
