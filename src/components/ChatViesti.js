@@ -49,8 +49,8 @@ osuma = () => {
                 {chatMessages}
                 <input 
                 value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
-                onChangeText={chatMessage => {
-                    this.setState({chatMessage}); //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
+                onChange={e => { this.setState({chatMessage: e.target.value});
+                     //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
                 }}/>
                 <div>
                 <button onClick={()=> this.submitChatMessage()}>Lähetä</button>
