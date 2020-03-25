@@ -2,7 +2,6 @@ import NavBar from "./NavBar";
 import React from 'react';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
-import ArvattavaSana from './ArvattavaSana' 
 import { getAllWords } from '../services/restClient'
 export default class ParentBox extends React.Component {
     constructor() {
@@ -17,7 +16,7 @@ export default class ParentBox extends React.Component {
     }
 
     //hakee kaikki sanat tietokannasta
-    componentDidMount = () => { 
+    componentDidMount = () => {
         getAllWords().then(allWords => {
             this.setState({ allWords });
         }).catch(err => {
@@ -25,7 +24,7 @@ export default class ParentBox extends React.Component {
             this.setState({ error: err.message })
         });
     }
-//valitsee random sanan
+    //valitsee random sanan
     handleSubmit(event) {
         event.preventDefault()
         const randNum = Math.floor(Math.random() * this.state.allWords.length)
@@ -33,8 +32,8 @@ export default class ParentBox extends React.Component {
         this.setState({ randomWord: randWord })
         // this.socket.emit(this.setState(randWord))
     }
-        
-//nappia painamalla esittää random sanan piirtäjää varten
+
+    //nappia painamalla esittää random sanan piirtäjää varten
     render() {
         return (
             <div id="parentbox">
@@ -46,13 +45,10 @@ export default class ParentBox extends React.Component {
                     <div>
                         <button onClick={this.handleSubmit}>Press me</button>
                     </div>
-                    <ArvattavaSana sana2={this.state.randomWord} />
-                    <ChatViesti sana={this.state.randomWord}/>
-                </div>
-                <ArvattavaSana sana2={this.state.randomWord} />
-                <div className="container">
-                <SocketBox sana={this.state.randomWord}/>
-                <SketchBox />
+                    <div className="container">
+                        <SocketBox sana={this.state.randomWord} />
+                        <SketchBox sana={this.state.randomWord} />
+                    </div>
                 </div>
             </div>
         )

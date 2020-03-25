@@ -19,7 +19,7 @@ const NavBar = () => {
                 <span>
                     <Link to="/">Home</Link>&nbsp;
                     <Link to="/profile">Profile</Link>
-                    <Link to="/parentBox">ParentBox</Link>
+                    <Link to="/play">Pelaa</Link>
                 </span>
     )}
         
