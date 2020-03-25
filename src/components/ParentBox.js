@@ -1,3 +1,4 @@
+import NavBar from "./NavBar";
 import React from 'react';
 import ChatViesti from './ChatViesti'
 //import io from 'socket.io-client' <- tämä socketBoxiin
@@ -43,13 +44,18 @@ export default class ParentBox extends React.Component {
 //nappia painamalla esittää random sanan piirtäjää varten
     render() {
         return (
-            <div onSubmit={this.handleSubmit}>
-                <p>Click on the Button & Start to Draw {'\n'}</p>
-                <div>
-                    <button onClick={this.handleSubmit}>Press me</button>
+            <div id="parentbox">
+                <nav>
+                    <NavBar />
+                </nav>
+                <div onSubmit={this.handleSubmit}>
+                    <p>Click on the Button & Start to Draw {'\n'}</p>
+                    <div>
+                        <button onClick={this.handleSubmit}>Press me</button>
+                    </div>
+                    <ArvattavaSana sana2={this.state.randomWord} />
+                    <ChatViesti sana={this.state.randomWord}/>
                 </div>
-                <ArvattavaSana sana2={this.state.randomWord} />
-                <ChatViesti sana={this.state.randomWord}/>
             </div>
         )
     }
