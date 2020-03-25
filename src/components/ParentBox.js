@@ -1,9 +1,17 @@
 import NavBar from "./NavBar";
 import React from 'react';
+<<<<<<< HEAD
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
+=======
+import ChatViesti from './ChatViesti'
+//import io from 'socket.io-client' <- tämä socketBoxiin
+import ArvattavaSana from './ArvattavaSana' 
+import { getAllWords} from '../services/restClient'
+import Piirtoalusta from './Piirtoalusta';
+>>>>>>> master
 export default class ParentBox extends React.Component {
     constructor() {
         super()
@@ -45,11 +53,11 @@ export default class ParentBox extends React.Component {
                     <p>Click on the Button & Start to Draw {'\n'}</p>
                     <div>
                         <button onClick={this.handleSubmit}>Press me</button>
-                        <ArvattavaSana />
+                        <ArvattavaSana sana2={this.state.randomWord}/>
                     </div>
                     <div className="container">
                         <SocketBox sana={this.state.randomWord} />
-                        <SketchBox sana={this.state.randomWord} />
+                        <SketchBox />
                     </div>
                 </div>
             </div>
