@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import React from 'react';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
+import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 export default class ParentBox extends React.Component {
     constructor() {
@@ -44,6 +45,7 @@ export default class ParentBox extends React.Component {
                     <p>Click on the Button & Start to Draw {'\n'}</p>
                     <div>
                         <button onClick={this.handleSubmit}>Press me</button>
+                        <ArvattavaSana />
                     </div>
                     <div className="container">
                         <SocketBox sana={this.state.randomWord} />
