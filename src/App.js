@@ -12,8 +12,11 @@ function App() {
     <div className="App">
       <Router history={history}>
         <header>
-          <NavBar />
+         <h1>Piirtoalias</h1>
         </header>
+        <nav>
+           <NavBar />
+        </nav>
         <Switch>
           <Route path="/" exact />
           <PrivateRoute path="/profile" component={Profile} />  
