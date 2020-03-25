@@ -4,6 +4,7 @@ import ChatViesti from './ChatViesti'
 //import io from 'socket.io-client' <- tämä socketBoxiin
 import ArvattavaSana from './ArvattavaSana' 
 import { getAllWords} from '../services/restClient'
+import Piirtoalusta from './Piirtoalusta';
 export default class ParentBox extends React.Component {
     constructor() {
         super()
@@ -55,6 +56,7 @@ export default class ParentBox extends React.Component {
                     </div>
                     <ArvattavaSana sana2={this.state.randomWord} />
                     <ChatViesti sana={this.state.randomWord}/>
+                    <Piirtoalusta/>
                 </div>
             </div>
         )
