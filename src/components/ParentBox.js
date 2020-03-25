@@ -46,7 +46,7 @@ export default class ParentBox extends React.Component {
             <div onSubmit={this.handleSubmit}>
                 <p>Click on the Button & Start to Draw {'\n'}</p>
                 <div>
-                    <button onPress={this.handleSubmit}>Press me</button>
+                    <button onClick={this.handleSubmit}>Press me</button>
                 </div>
                 <ArvattavaSana sana2={this.state.randomWord} />
                 <ChatViesti sana={this.state.randomWord}/>
@@ -54,3 +54,4 @@ export default class ParentBox extends React.Component {
         )
     }
 }
+
