@@ -1,8 +1,8 @@
 import React from 'react';
-import ChatViesti from './ChatViesti'
-//import io from 'socket.io-client' <- tämä socketBoxiin
+import SocketBox from './SocketBox'
+import SketchBox from './SketchBox'
 import ArvattavaSana from './ArvattavaSana' 
-import { getAllWords} from '../services/restClient'
+import { getAllWords } from '../services/restClient'
 export default class ParentBox extends React.Component {
     constructor() {
         super()
@@ -38,8 +38,6 @@ export default class ParentBox extends React.Component {
         // this.socket.emit(this.setState(randWord))
     }
         
-            
-    
 //nappia painamalla esittää random sanan piirtäjää varten
     render() {
         return (
@@ -49,7 +47,10 @@ export default class ParentBox extends React.Component {
                     <button onClick={this.handleSubmit}>Press me</button>
                 </div>
                 <ArvattavaSana sana2={this.state.randomWord} />
-                <ChatViesti sana={this.state.randomWord}/>
+                <div className="container">
+                <SocketBox sana={this.state.randomWord}/>
+                <SketchBox />
+                </div>
             </div>
         )
     }

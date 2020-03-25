@@ -9,12 +9,27 @@ header {
 /* ---------komponentit----------- */
 
 #parentbox {
-  background-color: seashell;
+  background-color: yellow;
 }
 
-#sketchbox {
-  background-color: snow;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
+
+
+
+#sketchbox {
+  background-color: purple;
+}
+
+#socketbox {
+  background-color: papayawhip;
+}
+
+
 
 #piirtoalusta {
   background-color: wheat;
@@ -28,25 +43,24 @@ header {
   background-color: azure;
 }
 
-#socketbox {
-  background-color: papayawhip;
-}
 
-#viestinlahetys {
-  background-color: oldlace;
-}
 
 #listauspelaajat {
   background-color: mistyrose;
 }
 
-#chatviesti {
-  background-color: linen;
+#viestitys {
+  background-color: red;
+}
+
+#keskustelu {
+  background-color: lime;
+  height: 100px;
+  width: 100px;
 }
 
 #profiili {
   background-color: lightyellow;
 }
-
 /* 
 -----Niina */

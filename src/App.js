@@ -25,7 +25,6 @@ function App() {
           <Route path="/parentBox" exact component={ParentBox} />
         </Switch>
       </Router>
-      <ParentBox/>
     </div>
   );
 }
