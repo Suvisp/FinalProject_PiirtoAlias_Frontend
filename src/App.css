@@ -7,12 +7,41 @@ header {
 }
 
 /* ---------komponentit----------- */
+
+#parentbox {
+  background-color: seashell;
+}
+
+#sketchbox {
+  background-color: snow;
+}
+
+#piirtoalusta {
+  background-color: wheat;
+}
+
 #arvattavasana {
   background-color: antiquewhite;
 }
 
 #arvaukset {
   background-color: azure;
+}
+
+#socketbox {
+  background-color: papayawhip;
+}
+
+#viestinlahetys {
+  background-color: oldlace;
+}
+
+#listauspelaajat {
+  background-color: mistyrose;
+}
+
+#chatviesti {
+  background-color: linen;
 }
 
 /* 
