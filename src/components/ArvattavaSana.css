@@ -1,0 +1,20 @@
+.sana-otsikko {
+    width: 60%;
+    text-align: center;
+    left: 30%;
+    font-size: 20;
+    color: black;
+    letter-spacing: 1;
+    top: 0;
+}
+/* 
+.sana {
+    width: 60%;
+    text-align: center;
+    left: 30%;
+    font-size: 20;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1;
+    top: 0;
+} */
