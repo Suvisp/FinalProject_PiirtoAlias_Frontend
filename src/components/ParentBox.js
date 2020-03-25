@@ -46,7 +46,7 @@ export default class ParentBox extends React.Component {
             <div onSubmit={this.handleSubmit}>
                 <p>Click on the Button & Start to Draw {'\n'}</p>
                 <div>
-                    <button onPress={this.handleSubmit}>Press me</button>
+                    <button onClick={this.handleSubmit}>Press me</button>
                 </div>
                 <ArvattavaSana sana2={this.state.randomWord} />
                 <ChatViesti sana={this.state.randomWord}/>
@@ -55,26 +55,3 @@ export default class ParentBox extends React.Component {
     }
 }
 
-// const styles = StyleSheet.create({
-//     toptext: {
-//         width: "60 %",
-//         textAlign: "center",
-//         left: "30 %",
-//         fontSize: 20,
-//         color: "black",
-//         letterSpacing: 1,
-//         textShadowRadius: 10,
-//         top: 0,
-//     },
-//     word: {
-//         width: "60 %",
-//         textAlign: "center",
-//         left: "30 %",
-//         fontSize: 20,
-//         textTransform: "uppercase",
-//         color: "black",
-//         letterSpacing: 1,
-//         textShadowRadius: 10,
-//         top: 0
-//     }
-// })
