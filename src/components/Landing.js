@@ -15,7 +15,7 @@ const Landing = () => {
                 <button onClick={() => loginWithRedirect({})}>Aloita peli</button>
             </div>)
     } else 
-    return <Redirect to='/parentBox'  component={ParentBox} />;
+    return <Redirect to='/play'  component={ParentBox} />;
 };
 
 export default Landing;

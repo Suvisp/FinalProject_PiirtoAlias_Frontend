@@ -1,10 +1,11 @@
 import NavBar from "./NavBar";
 import React from 'react';
-import ChatViesti from './ChatViesti'
-//import io from 'socket.io-client' <- tämä socketBoxiin
-import ArvattavaSana from './ArvattavaSana' 
-import { getAllWords} from '../services/restClient'
-import Piirtoalusta from './Piirtoalusta';
+
+import SocketBox from './SocketBox'
+import SketchBox from './SketchBox'
+import ArvattavaSana from './ArvattavaSana'
+import { getAllWords } from '../services/restClient'
+
 export default class ParentBox extends React.Component {
     constructor() {
         super()
@@ -19,11 +20,6 @@ export default class ParentBox extends React.Component {
 
     //hakee kaikki sanat tietokannasta
     componentDidMount = () => {
-        // this.socket = io('http://192.168.1.5:3000/')
-        // this.socket.on("arvattava", guess => {
-        //     this.setState({randomWord: [...this.state.randomWord, guess]})
-        // })
-        
         getAllWords().then(allWords => {
             this.setState({ allWords });
         }).catch(err => {
@@ -31,7 +27,7 @@ export default class ParentBox extends React.Component {
             this.setState({ error: err.message })
         });
     }
-//valitsee random sanan
+    //valitsee random sanan
     handleSubmit(event) {
         event.preventDefault()
         const randNum = Math.floor(Math.random() * this.state.allWords.length)
@@ -39,10 +35,8 @@ export default class ParentBox extends React.Component {
         this.setState({ randomWord: randWord })
         // this.socket.emit(this.setState(randWord))
     }
-        
-            
-    
-//nappia painamalla esittää random sanan piirtäjää varten
+
+    //nappia painamalla esittää random sanan piirtäjää varten
     render() {
         return (
             <div id="parentbox">
@@ -53,10 +47,12 @@ export default class ParentBox extends React.Component {
                     <p>Click on the Button & Start to Draw {'\n'}</p>
                     <div>
                         <button onClick={this.handleSubmit}>Press me</button>
+                        <ArvattavaSana sana2={this.state.randomWord}/>
                     </div>
-                    <ArvattavaSana sana2={this.state.randomWord} />
-                    <ChatViesti sana={this.state.randomWord}/>
-                    <Piirtoalusta/>
+                    <div className="container">
+                        <SocketBox sana={this.state.randomWord} />
+                        <SketchBox />
+                    </div>
                 </div>
             </div>
         )

@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { useAuth0 } from '../react-auth0-spa';
 import { Link } from 'react-router-dom';
-import ParentBox from './ParentBox';
 
 // This component is responsible for showing the login and logout buttons
 
@@ -20,7 +19,7 @@ const NavBar = () => {
                 <span>
                     <Link to="/">Home</Link>&nbsp;
                     <Link to="/profile">Profile</Link>
-                    <Link to="/parentBox">ParentBox</Link>
+                    <Link to="/play">Pelaa</Link>
                 </span>
     )}
         
