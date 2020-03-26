@@ -24,7 +24,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 #arvattavasana {
@@ -46,12 +46,13 @@ header {
 
 /* -----------SOCKET BOX-------------- */
 #socketbox {
-  width: 45%;
+  width: 43%;
 }
 
 #viestitys {
   background-color: white;
   height: 15%;
+  width: 100%;
   padding: 5px;
 }
 
@@ -62,7 +63,8 @@ header {
 }
 
 #listauspelaajat {
-  background-color: azure;
+  width: 18%;
+  height: auto;
 }
 
 /* ------PROFIILI TAB -----------*/
