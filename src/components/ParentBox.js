@@ -45,17 +45,16 @@ export default class ParentBox extends React.Component {
                     <NavBar />
                 </nav>
                 <div onSubmit={this.handleSubmit}>
-                    <section id="arvattavasana">
-                        <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p>
-                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Press me</Button>
-                        <ArvattavaSana sana2={this.state.randomWord} />
-                    </section>
                     <div className="container">
+                        {/* <ListausPelaajat /> <--tänne chätissä olevat pelaajat */}
                         <SocketBox sana={this.state.randomWord} />
                         <SketchBox />
                     </div>
-                    <ArvattavaSana sana2={this.state.randomWord} />
-                    <Piirtoalusta/>
+                    <section id="arvattavasana">
+                        {/* <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p> */}
+                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Arvo sana</Button>
+                        <ArvattavaSana sana2={this.state.randomWord} />
+                    </section>
                 </div>
             </div>
         )
