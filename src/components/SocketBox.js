@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import io from 'socket.io-client'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export default class SocketBox extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -45,10 +48,10 @@ export default class SocketBox extends Component {
                     {chatMessages}
                 </div>
                 <div id="viestitys">
-                    <input value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
+                    <TextField id="filled-basic" label="viestisi..." variant="filled" value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
                         onChange={e => { this.setState({ chatMessage: e.target.value }); //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
                         }} />
-                    <button onClick={() => this.submitChatMessage()}>Lähetä</button>
+                    <Button variant="contained" color="primary" onClick={() => this.submitChatMessage()}>Lähetä</Button>
                 </div>
 
             </div>

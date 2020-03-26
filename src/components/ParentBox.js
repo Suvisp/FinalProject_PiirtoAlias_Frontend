@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 import React from 'react';
-
+import Button from '@material-ui/core/Button';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import ArvattavaSana from './ArvattavaSana'
@@ -44,11 +44,11 @@ export default class ParentBox extends React.Component {
                     <NavBar />
                 </nav>
                 <div onSubmit={this.handleSubmit}>
-                    <p>Click on the Button & Start to Draw {'\n'}</p>
-                    <div>
-                        <button onClick={this.handleSubmit}>Press me</button>
-                        <ArvattavaSana sana2={this.state.randomWord}/>
-                    </div>
+                    <section id="arvattavasana">
+                        <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p>
+                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Press me</Button>
+                        <ArvattavaSana sana2={this.state.randomWord} />
+                    </section>
                     <div className="container">
                         <SocketBox sana={this.state.randomWord} />
                         <SketchBox />

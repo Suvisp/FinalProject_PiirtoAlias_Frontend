@@ -6,8 +6,8 @@ ReactDOM.render(<CanvasDraw />, document.getElementById("root"));
 export default class Piirtoalusta extends Component {
     state = {
         color: "#ffc600",
-        width: 400,
-        height: 400,
+        width: 900,
+        height: 900,
         brushRadius: 10,
         lazyRadius: 12
       };
