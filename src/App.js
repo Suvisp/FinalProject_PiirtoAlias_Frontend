@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Landing} />
           <PrivateRoute path='/profile' component={Profile} />
-          {/* <PrivateRoute path='/play' component={ParentBox} /> */}
+          <PrivateRoute path='/play' component={ParentBox} />
         </Switch>
       </Router>
       {/* <ParentBox /> */}
