@@ -71,8 +71,11 @@ header {
 }
 /* ------LANDING PAGE -----------*/
 .tausta {
-  background-color: aqua;
-  display: flex;
+  background-image:url(images/taustakuva.png);
   width: 100vw;
   height: 100vh;
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+  position: relative;
+  display: flex;
 }
