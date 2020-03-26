@@ -3,7 +3,8 @@ import React from 'react';
 
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
-import GuessWord from './GuessWord'
+import Piirtoalusta from './Piirtoalusta'
+import ArvattavaSana from './ArvattaSana'
 import { getAllWords } from '../services/restClient'
 
 export default class ParentBox extends React.Component {
@@ -47,12 +48,14 @@ export default class ParentBox extends React.Component {
                     <p>Hae sana & aloita piirtäminen {'\n'}</p>
                     <div>
                         <button onClick={this.handleSubmit}>Aloita peli</button>
-                        <GuessWord sana2={this.state.randomWord}/>
+                        <ArvattavaSana sana2={this.state.randomWord}/>
                     </div>
                     <div className="container">
                         <SocketBox sana={this.state.randomWord} />
                         <SketchBox />
                     </div>
+                    <ArvattavaSana sana2={this.state.randomWord} />
+                    <Piirtoalusta/>
                 </div>
             </div>
         )
