@@ -4,7 +4,7 @@ import React from 'react';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import Piirtoalusta from './Piirtoalusta'
-import ArvattavaSana from './ArvattaSana'
+import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 
 export default class ParentBox extends React.Component {
