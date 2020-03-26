@@ -55,7 +55,6 @@ export default class ParentBox extends React.Component {
                         <SketchBox />
                     </div>
                     <ArvattavaSana sana2={this.state.randomWord} />
-                    <Piirtoalusta/>
                 </div>
             </div>
         )
