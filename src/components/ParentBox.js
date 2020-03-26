@@ -3,6 +3,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
+import Piirtoalusta from './Piirtoalusta'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 
@@ -53,6 +54,8 @@ export default class ParentBox extends React.Component {
                         <SocketBox sana={this.state.randomWord} />
                         <SketchBox />
                     </div>
+                    <ArvattavaSana sana2={this.state.randomWord} />
+                    <Piirtoalusta/>
                 </div>
             </div>
         )
