@@ -55,8 +55,8 @@ export default class ParentBox extends React.Component {
                         <button onClick={this.handleSubmit}>Press me</button>
                     </div>
                     <ArvattavaSana sana2={this.state.randomWord} />
-                    <ChatViesti sana={this.state.randomWord}/>
                     <Piirtoalusta/>
+                    <ChatViesti sana={this.state.randomWord}/>
                 </div>
             </div>
         )
