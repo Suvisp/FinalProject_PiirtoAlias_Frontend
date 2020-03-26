@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 export default class SocketBox extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -49,15 +49,16 @@ export default class SocketBox extends Component {
 
     render() {
         const chatMessages = this.state.chatMessages.map(chatMessage => <p key={chatMessage}>{chatMessage}</p>) //mäpätään chatMessages ja luodaan taulukon jokaisesta
+        const inputProps = { fullWidth: true };
         return (                                                                                                //itemistä <Text>- elementti
             <div id="socketbox">
                 <div id="keskustelu">
                     {chatMessages}
                 </div>
                 <div id="viestitys">
-                    <TextField id="filled-basic" label="viestisi..." variant="filled" value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
-                        onChange={e => { this.setState({ chatMessage: e.target.value }); //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
-                        }} />
+                    <TextField inputProps={inputProps} id="filled-basic" label="viestisi..." variant="filled" value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
+                        onChange={e => { this.setState({ chatMessage: e.target.value }); }} /> 
+                        {/* //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan */}
                     <Button variant="contained" color="primary" onClick={() => this.submitChatMessage()}>Lähetä</Button>
                 </div>
                 <div type="scores" id="scores" value="Scores:">
