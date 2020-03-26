@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ArvattavaSana from './ArvattavaSana'
 import { useAuth0 } from '../react-auth0-spa';
 import { Link } from 'react-router-dom';
 import ParentBox from './ParentBox';
@@ -32,25 +33,65 @@ const NavBar = () => {
     const classes = useStyles();
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
 
+    const handleChange = event => {
+        loginWithRedirect(event.target.checked);
+      };
+    
+      const handleMenu = event => {
+        setAnchorEl(event.currentTarget);
+      };
+    
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+      const logOut = () => {
+        logout();
+      }
+    
+  
     return (
-        <div>
-            {!isAuthenticated && (
-                <button onClick={() => loginWithRedirect({})}>Log in</button>
-            )}
-
-            {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-        
-            {isAuthenticated && (
-                <span>
-                    <Link to="/">Home</Link>&nbsp;
-                    <Link to="/profile">Profile</Link>
-                    <Link to="/parentBox">ParentBox</Link>
-                </span>
-    )}
-        
-        
-        
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                <Typography variant="subtitle2" className={classes.title}>
+                    <p>Piirrä: </p>
+                    <ArvattavaSana />
+                </Typography>
+                    {isAuthenticated && (
+                    <div>
+                    <IconButton
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleMenu}
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorEl}
+                        anchorOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                        }}
+                        open={open}
+                        onClose={handleClose}
+                    >
+                        <MenuItem onClick={handleClose}><Link to="/profile">Profile</Link></MenuItem>
+                        <MenuItem onClick={logOut}>Log out</MenuItem>
+                    </Menu>
+                    </div>
+             )}
+            </Toolbar>
+        </AppBar>
         </div>
     );
 };
