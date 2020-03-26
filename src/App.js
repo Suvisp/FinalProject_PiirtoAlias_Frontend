@@ -20,7 +20,6 @@ function App() {
           <PrivateRoute path='/play' component={ParentBox} />
         </Switch>
       </Router>
-      {/* <ParentBox /> */}
     </div>
   );
 }
