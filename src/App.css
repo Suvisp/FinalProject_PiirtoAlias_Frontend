@@ -1,3 +1,7 @@
+* {
+  margin: 0px;
+}
+
 nav {
   background-color: whitesmoke;
 }
@@ -6,47 +10,64 @@ header {
   background-color: aliceblue;
 }
 
-/* ---------komponentit----------- */
+/* ---------YLÄKOMPONENTIT----------- */
 
 #parentbox {
-  background-color: seashell;
+  background-color: yellow;
+  height: 100vh;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* ------------SKETCHBOX---------- */
+
 #sketchbox {
-  background-color: snow;
+  background-color: purple;
+  width: 45%;
 }
 
 #piirtoalusta {
   background-color: wheat;
+  width: 100%;
+  height: 100%;
 }
 
 #arvattavasana {
-  background-color: antiquewhite;
+  background-color: blue;
+}
+
+/* -----------SOCKET BOX-------------- */
+#socketbox {
+  background-color: papayawhip;
+  width: 45%;
 }
 
 #arvaukset {
   background-color: azure;
 }
 
-#socketbox {
-  background-color: papayawhip;
+#viestitys {
+  background-color: red;
+  height: 10%;
 }
 
-#viestinlahetys {
-  background-color: oldlace;
+#keskustelu {
+  background-color: lime;
+  height: 90%;
+  width: 100%;
 }
 
 #listauspelaajat {
   background-color: mistyrose;
 }
 
-#chatviesti {
-  background-color: linen;
-}
+/* ------PROFIILI TAB -----------*/
 
 #profiili {
   background-color: lightyellow;
 }
-
-/* 
------Niina */

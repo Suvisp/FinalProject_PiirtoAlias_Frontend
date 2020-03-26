@@ -13,13 +13,14 @@ import ParentBox from './components/ParentBox';
 function App() {
   return (
     <div className="App">
-      <Router history={history}>
+      {/* <Router history={history}>
         <Switch>
           <Route exact path='/' component={Landing} />
           <PrivateRoute path='/profile' component={Profile} />
-          <PrivateRoute path='/parentBox' component={ParentBox} />
+          <PrivateRoute path='/play' component={ParentBox} />
         </Switch>
-      </Router>
+      </Router> */}
+      <ParentBox />
     </div>
   );
 }
