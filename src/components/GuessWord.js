@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export default class ArvattavaSana extends Component {
+export default class GuessWord extends Component {
     render() {
     
         return (

@@ -3,7 +3,7 @@ import React from 'react';
 
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
-import ArvattavaSana from './ArvattavaSana'
+import GuessWord from './GuessWord'
 import { getAllWords } from '../services/restClient'
 
 export default class ParentBox extends React.Component {
@@ -44,10 +44,10 @@ export default class ParentBox extends React.Component {
                     <NavBar />
                 </nav>
                 <div onSubmit={this.handleSubmit}>
-                    <p>Click on the Button & Start to Draw {'\n'}</p>
+                    <p>Hae sana & aloita piirtäminen {'\n'}</p>
                     <div>
-                        <button onClick={this.handleSubmit}>Press me</button>
-                        <ArvattavaSana sana2={this.state.randomWord}/>
+                        <button onClick={this.handleSubmit}>Aloita peli</button>
+                        <GuessWord sana2={this.state.randomWord}/>
                     </div>
                     <div className="container">
                         <SocketBox sana={this.state.randomWord} />

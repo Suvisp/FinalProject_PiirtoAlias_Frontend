@@ -30,11 +30,18 @@ export default class SocketBox extends Component {
     }
 
     osuma = () => {
-        this.setState({points: this.state.points + 1}, () => { //kun arvaus menee oikein, lisätään yksi piste pointsin stateen.
+        this.setState({ points: this.state.points + 1 }, () => { //kun arvaus menee oikein, lisätään yksi piste pointsin stateen.
             console.log(this.state.points)
-            // sessionStorage.setItem("points", this.state.points);
         });
+        this.addPointsToSessionStorage();
         console.log('tähän vielä joku funktio vuoron vaihtumisesta??') //tässä kutsutaan vielä tekemätöntä funktiota millä saadaan vuoro vaihdettua
+    }
+    //lisää pisteet SessionStorageen
+    addPointsToSessionStorage() {
+        let scores = parseInt(sessionStorage.getItem("scores"));
+        sessionStorage.setItem("scores", this.state.points + 1);
+        //näyttää kertyneet pisteet sivulla
+        document.getElementById("scores").innerHTML = `Pisteeni: ${sessionStorage.getItem("scores")}`;
     }
 
     render() {
@@ -46,11 +53,13 @@ export default class SocketBox extends Component {
                 </div>
                 <div id="viestitys">
                     <input value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
-                        onChange={e => { this.setState({ chatMessage: e.target.value }); //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
+                        onChange={e => {
+                            this.setState({ chatMessage: e.target.value }); //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan
                         }} />
                     <button onClick={() => this.submitChatMessage()}>Lähetä</button>
                 </div>
-
+                <div type="scores" id="scores" value="Scores:">
+                </div>
             </div>
         )
     }
