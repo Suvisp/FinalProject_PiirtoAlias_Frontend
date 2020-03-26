@@ -2,18 +2,21 @@
   margin: 0px;
 }
 
-nav {
+body {
   background-color: whitesmoke;
 }
 
+nav {
+  background-color: white;
+}
+
 header {
-  background-color: aliceblue;
+  background-color: white;
 }
 
 /* ---------YLÄKOMPONENTIT----------- */
 
 #parentbox {
-  background-color: yellow;
   height: 100vh;
 }
 
@@ -24,46 +27,41 @@ header {
   justify-content: center;
 }
 
+#arvattavasana {
+  padding: 10px;
+  text-align: center;
+}
+
 /* ------------SKETCHBOX---------- */
 
 #sketchbox {
-  background-color: purple;
-  width: 45%;
+  width: 400px;
 }
 
 #piirtoalusta {
-  background-color: wheat;
   width: 100%;
   height: 100%;
 }
 
-#arvattavasana {
-  background-color: blue;
-}
-
 /* -----------SOCKET BOX-------------- */
 #socketbox {
-  background-color: papayawhip;
   width: 45%;
 }
 
-#arvaukset {
-  background-color: azure;
-}
-
 #viestitys {
-  background-color: red;
-  height: 10%;
+  background-color: white;
+  height: 15%;
+  padding: 5px;
 }
 
 #keskustelu {
-  background-color: lime;
+  background-color: white;
   height: 90%;
   width: 100%;
 }
 
 #listauspelaajat {
-  background-color: mistyrose;
+  background-color: azure;
 }
 
 /* ------PROFIILI TAB -----------*/
