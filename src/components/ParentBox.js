@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
-import Piirtoalusta from './Piirtoalusta'
+import ListausPelaajat from './ListausPelaajat'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 // import ListausPelaajat from './ListausPelaajat';
@@ -43,19 +43,23 @@ export default class ParentBox extends React.Component {
         return (
             <div id="parentbox">
                 <nav>
-                    <NavBar />
+                    <NavBar randomWord={this.state.randomWord}  />
                 </nav>
                 <div onSubmit={this.handleSubmit}>
                     <div className="container">
                         {/* <ListausPelaajat />  */}
                         <SocketBox sana={this.state.randomWord} />
+
                         <SketchBox />
+                        <SocketBox sana={this.state.randomWord} />
+                        <ListausPelaajat />
+                            {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
                     </div>
-                    <section id="arvattavasana">
-                        {/* <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p> */}
+                    {/* <section id="arvattavasana">
+                        <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p>
                         <Button variant="contained" color="primary" onClick={this.handleSubmit}>Arvo sana</Button>
                         <ArvattavaSana sana2={this.state.randomWord} />
-                    </section>
+                    </section> */}
                 </div>
             </div>
         )
