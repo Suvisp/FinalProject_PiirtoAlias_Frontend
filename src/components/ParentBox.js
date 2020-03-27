@@ -6,6 +6,7 @@ import SketchBox from './SketchBox'
 import Piirtoalusta from './Piirtoalusta'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
+// import ListausPelaajat from './ListausPelaajat';
 
 export default class ParentBox extends React.Component {
     constructor() {
@@ -46,7 +47,7 @@ export default class ParentBox extends React.Component {
                 </nav>
                 <div onSubmit={this.handleSubmit}>
                     <div className="container">
-                        {/* <ListausPelaajat /> <--tänne chätissä olevat pelaajat */}
+                        {/* <ListausPelaajat />  */}
                         <SocketBox sana={this.state.randomWord} />
                         <SketchBox />
                     </div>
