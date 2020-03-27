@@ -1,10 +1,9 @@
 import NavBar from "./NavBar";
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import ListausPelaajat from './ListausPelaajat'
-import ArvattavaSana from './ArvattavaSana'
+// import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 import Timer from './Timer';
 
