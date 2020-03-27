@@ -5,18 +5,22 @@ import CanvasDraw from "react-canvas-draw";
 ReactDOM.render(<CanvasDraw />, document.getElementById("root"));
 export default class Piirtoalusta extends Component {
     state = {
-        color: "#ffc600",
-        width: 900,
-        height: 900,
-        brushRadius: 10,
-        lazyRadius: 12
+        color: "red",
+        width: "98vw",
+        height: 500,
+        brushRadius: 6,
+        lazyRadius: 5
       };
     render() {
         return (
             <div id="piirtoalusta">
-                <CanvasDraw />
+                <CanvasDraw 
+                brushColor={this.state.color} 
+                canvasWidth={this.state.width} 
+                brushRadius={this.state.brushRadius} 
+                lazyRadius={this.state.lazyRadius}/>
             </div>
         )
     }
 }
-
+// style={{width: "800px"}}

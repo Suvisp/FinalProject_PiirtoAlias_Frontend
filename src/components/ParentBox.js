@@ -46,10 +46,10 @@ export default class ParentBox extends React.Component {
                 </nav>
                 <div onSubmit={this.handleSubmit}>
                     <div className="container">
+                        <SketchBox />
+                        <SocketBox sana={this.state.randomWord} />
                         <ListausPelaajat />
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
-                        <SocketBox sana={this.state.randomWord} />
-                        <SketchBox />
                     </div>
                     <section id="arvattavasana">
                         {/* <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p> */}
