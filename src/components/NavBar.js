@@ -20,6 +20,7 @@ import Menu from '@material-ui/core/Menu';
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
+
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-const NavBar = () => {
+const NavBar = (props) => {
     const classes = useStyles();
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -43,7 +44,7 @@ const NavBar = () => {
         setAnchorEl(event.currentTarget);
       };
     
-      const handleClose = () => {
+      const handleClose = (props) => {
         setAnchorEl(null);
       };
       const logOut = () => {
@@ -56,9 +57,9 @@ const NavBar = () => {
             <AppBar position="static">
                 <Toolbar>
                 <Typography variant="subtitle2" className={classes.title}>
-                    <p>Piirrä: </p>
-                    <ArvattavaSana />
+                  <span>Piirrä:</span>
                 </Typography>
+                <ArvattavaSana sana2={props.randomWord} />
                     {isAuthenticated && (
                     <div>
                     <IconButton
