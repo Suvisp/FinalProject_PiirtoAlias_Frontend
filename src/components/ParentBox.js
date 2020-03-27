@@ -56,9 +56,6 @@ export default class ParentBox extends React.Component {
                 </nav>
                 <div onSubmit={this.handleSubmit}>
                     <div className="container">
-                        {/* <ListausPelaajat />  */}
-                        <SocketBox sana={this.state.randomWord} />
-
                         <SketchBox />
                         <SocketBox sana={this.state.randomWord} />
                         <ListausPelaajat />

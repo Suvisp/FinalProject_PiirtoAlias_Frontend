@@ -23,4 +23,3 @@ export default class Piirtoalusta extends Component {
         )
     }
 }
-// style={{width: "800px"}}
