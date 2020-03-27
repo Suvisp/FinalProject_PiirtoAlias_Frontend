@@ -19,9 +19,6 @@ header {
 
 /* ---------YLÄKOMPONENTIT----------- */
 
-#parentbox {
-  height: 100vh;
-}
 
 .container {
   display: flex;
@@ -36,10 +33,19 @@ header {
   width: 100%;
 }
 
+#toolit {
+  width: 90%;
+  margin-left: 23%;
+}
+
+#undobtn {
+  margin-left: 5px;
+}
+
 /* -----------SOCKET BOX-------------- */
 
 #socketbox {
-  width: 100vw;
+  width: 95vw;
   overflow-x: hidden;
 }
 
@@ -47,7 +53,7 @@ header {
   background-color: whitesmoke;
   height: 150px;
   padding-top: 5px;
-  width: 90%;
+  width: 95%;
   margin-left: 5%;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -56,12 +62,12 @@ header {
 #viestitys {
   background-color: white;
   height: 10%;
-  width: 90%;
+  width: 95%;
   margin-left: 5%;
 }
 
 #filled-basic {
-  width: 86vw;
+  width: 89vw;
   margin-top: 15px;
   padding: 10px;
 }
