@@ -6,6 +6,7 @@ import SketchBox from './SketchBox'
 import ListausPelaajat from './ListausPelaajat'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
+import io from 'socket.io-client'
 // import ListausPelaajat from './ListausPelaajat';
 
 export default class ParentBox extends React.Component {
@@ -22,21 +23,29 @@ export default class ParentBox extends React.Component {
 
     //hakee kaikki sanat tietokannasta
     componentDidMount = () => {
+        this.socket = io('http://localhost:3000/')
+        this.socket.on("sana", wrd => {
+            this.setState({ randomWord: [wrd] })
+        })
         getAllWords().then(allWords => {
-            this.setState({ allWords });
+            this.setState({ allWords }, () => {
+                this.handleSubmit();
+            })
+            
         }).catch(err => {
             console.error("Caught an error", err);
             this.setState({ error: err.message })
         });
     }
     //valitsee random sanan
-    handleSubmit(event) {
-        event.preventDefault()
+    handleSubmit() {
+        // event.preventDefault()
         const randNum = Math.floor(Math.random() * this.state.allWords.length)
         const randWord = this.state.allWords[randNum].word
-        this.setState({ randomWord: randWord })
+        this.setState({ randomWord: randWord }, () => {
+            this.socket.emit('sana', this.state.randomWord)
         // this.socket.emit(this.setState(randWord))
-    }
+    })}
 
     //nappia painamalla esittää random sanan piirtäjää varten
     render() {
