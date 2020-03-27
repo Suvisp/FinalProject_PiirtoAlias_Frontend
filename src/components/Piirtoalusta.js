@@ -23,6 +23,10 @@ export default class Piirtoalusta extends Component {
                     lazyRadius={this.state.lazyRadius} />
             </div>
             <div id="toolit">
+                <button class="swatches" id="redbtn" onClick={() => {this.setState({color:"red"})}}>&#128396;</button>
+                <button class="swatches" id="bluebtn" onClick={() => {this.setState({color:"blue"})}}>&#128396;</button>
+                <button class="swatches" id="yellowbtn" onClick={() => {this.setState({color:"yellow"})}}>&#128396;</button>
+                <button class="swatches" id="greenbtn" onClick={() => {this.setState({color:"limegreen"})}}>&#128396;</button>
                 <Button id="clearbtn" variant="contained" color="primary" onClick={() => { this.saveableCanvas.clear(); }}>Tyhjennä</Button>
                 <Button id="undobtn" variant="contained" color="primary" onClick={() => { this.saveableCanvas.undo(); }}>Kumoa</Button>
             </div>
@@ -30,3 +34,5 @@ export default class Piirtoalusta extends Component {
         )
     }
 }
+
+// this.setState({color:"red", "blue", "limegreen", "yellow"})

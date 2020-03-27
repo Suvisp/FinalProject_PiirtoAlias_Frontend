@@ -34,19 +34,37 @@ header {
 }
 
 #toolit {
-  width: 90%;
-  margin-left: 23%;
+  width: 100%;
+  margin-left: 5%;
 }
 
 #undobtn {
   margin-left: 5px;
+}
+.swatches {
+  border: none;
+  width: 40px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+}
+#redbtn {
+background-color: red;
+}
+#greenbtn {
+  background-color: limegreen;
+}
+#bluebtn {
+  background-color: blue;
+}
+#yellowbtn {
+  background-color: yellow;
 }
 
 /* -----------SOCKET BOX-------------- */
 
 #socketbox {
   width: 95vw;
-  overflow-x: hidden;
 }
 
 #keskustelu {
@@ -67,7 +85,7 @@ header {
 }
 
 #filled-basic {
-  width: 89vw;
+  width: 85vw;
   margin-top: 15px;
   padding: 10px;
 }
@@ -93,6 +111,7 @@ header {
   width: 90vw;
   height: auto;
   margin-top: 15px;
+  margin-bottom: 15px;
   background-color: whitesmoke;
   border-radius: 5px;
   padding: 10px;
