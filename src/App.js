@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import PrivateRoute from './components/PrivateRoute';
-import { useAuth0 } from "./react-auth0-spa";
+// import { useAuth0 } from "./react-auth0-spa";
 import Landing from './components/Landing';
 import './App.css';
 
