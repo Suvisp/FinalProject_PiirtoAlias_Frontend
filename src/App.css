@@ -1,9 +1,12 @@
+/* TÄMÄ ON MODAUS ON ENSIJAISESTI MOBIILIA VARTEN */
+
 * {
   margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 nav {
@@ -23,13 +26,8 @@ header {
 .container {
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
   flex-wrap: nowrap;
-  align-items: center;
-}
-
-#arvattavasana {
-  padding: 10px;
-  text-align: center;
 }
 
 /* ------------SKETCHBOX---------- */
@@ -38,52 +36,61 @@ header {
   width: 100%;
 }
 
-#piirtoalusta {
-  width: 50%;
-  height: 50%;
-}
-
 /* -----------SOCKET BOX-------------- */
 
 #socketbox {
-  width: 98vw;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-hr {margin-bottom: 5px; margin-top: 5px;}
-
-#viestitys {
-  background-color: white;
-  box-sizing: border-box;
-  height: 10%;
-  width: 100%;
-  padding: 10px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 #keskustelu {
-  background-color: white;
-  height: 100px;
-  width: 100%;
+  background-color: whitesmoke;
+  height: 150px;
+  padding-top: 5px;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-#listauspelaajat {
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
+#viestitys {
+  background-color: white;
+  height: 10%;
+  width: 90%;
+  margin-left: 5%;
+}
+
+#filled-basic {
+  width: 86vw;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+#sending {
+  width: 90vw;
+  margin-top: 15px;
   padding: 10px;
 }
 
 #scores {
-  margin: 5px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 5px;
+  margin-top: 15px;
+  width: 90vw;
+  padding: 10px;
 }
 
-#sending {
-  margin-left: 2%;
-}
+/* -------- pelaajat komponentti -------*/
 
-#filled-basic {
- width: 68vw;
+#listauspelaajat {
+  width: 90vw;
+  height: auto;
+  margin-top: 15px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5%;
 }
 
 /* ------PROFIILI TAB -----------*/
