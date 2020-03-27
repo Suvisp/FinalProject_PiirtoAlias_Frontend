@@ -42,7 +42,7 @@ export default class ParentBox extends React.Component {
         return (
             <div id="parentbox">
                 <nav>
-                    <NavBar />
+                    <NavBar randomWord={this.state.randomWord}  />
                 </nav>
                 <div onSubmit={this.handleSubmit}>
                     <div className="container">
@@ -54,7 +54,7 @@ export default class ParentBox extends React.Component {
                     <section id="arvattavasana">
                         {/* <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p> */}
                         <Button variant="contained" color="primary" onClick={this.handleSubmit}>Arvo sana</Button>
-                        <ArvattavaSana sana2={this.state.randomWord} />
+                        {/* <ArvattavaSana sana2={this.state.randomWord} /> */}
                     </section>
                 </div>
             </div>
