@@ -50,14 +50,8 @@ export default class ParentBox extends React.Component {
                         <SketchBox />
                         <SocketBox sana={this.state.randomWord} />
                         <ListausPelaajat />
-                        <Timer startCount='60'/>
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
                     </div>
-                    {/* <section id="arvattavasana">
-                        <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p>
-                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Arvo sana</Button>
-                        <ArvattavaSana sana2={this.state.randomWord} />
-                    </section> */}
                 </div>
 
             </div>
