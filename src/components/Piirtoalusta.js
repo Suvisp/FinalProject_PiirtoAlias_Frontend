@@ -18,7 +18,7 @@ export default class Piirtoalusta extends Component {
                 brushColor={this.state.color} 
                 canvasWidth={this.state.width} 
                 brushRadius={this.state.brushRadius} 
-                lazyRadius={this.state.lazyRadius}/>
+                lazyRadius={this.state.lazyRadius} />
             </div>
         )
     }

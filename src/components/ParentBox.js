@@ -6,6 +6,7 @@ import SketchBox from './SketchBox'
 import ListausPelaajat from './ListausPelaajat'
 import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
+import Timer from './Timer';
 
 export default class ParentBox extends React.Component {
     constructor() {
@@ -49,6 +50,7 @@ export default class ParentBox extends React.Component {
                         <SketchBox />
                         <SocketBox sana={this.state.randomWord} />
                         <ListausPelaajat />
+                        <Timer startCount='60'/>
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
                     </div>
                     {/* <section id="arvattavasana">
@@ -57,6 +59,7 @@ export default class ParentBox extends React.Component {
                         <ArvattavaSana sana2={this.state.randomWord} />
                     </section> */}
                 </div>
+
             </div>
         )
     }
