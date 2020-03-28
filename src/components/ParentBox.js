@@ -16,8 +16,10 @@ export default class ParentBox extends React.Component {
             word: "",
             id: "",
             randomWord: "",
-            allWords: []
+            allWords: [],
+            // myTurnToDraw: true
         }
+
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -31,7 +33,7 @@ export default class ParentBox extends React.Component {
             this.setState({ allWords }, () => {
                 this.handleSubmit();
             })
-            
+
         }).catch(err => {
             console.error("Caught an error", err);
             this.setState({ error: err.message })
@@ -44,34 +46,49 @@ export default class ParentBox extends React.Component {
         const randWord = this.state.allWords[randNum].word
         this.setState({ randomWord: randWord }, () => {
             this.socket.emit('sana', this.state.randomWord)
-        // this.socket.emit(this.setState(randWord))
-    })}
-
-    //nappia painamalla esittää random sanan piirtäjää varten
+            // this.socket.emit(this.setState(randWord))
+        })
+    }
+//jos on piirustusvuorossa palauttaa seuraavan näkymän:
     render() {
-        return (
-            <div id="parentbox">
-                <nav>
-                    <NavBar randomWord={this.state.randomWord}  />
-                </nav>
-                <div onSubmit={this.handleSubmit}>
-                    <div className="container">
-                        {/* <ListausPelaajat />  */}
-                        <SocketBox sana={this.state.randomWord} />
-
-                        <SketchBox />
-                        <SocketBox sana={this.state.randomWord} />
-                        <ListausPelaajat />
+        if (myTurnToDraw === true) {
+            return (
+                <div id="parentbox">
+                    <nav>
+                        <NavBar randomWord={this.state.randomWord} />
+                    </nav>
+                    <div onSubmit={this.handleSubmit}>
+                        <div className="container">
+                            {/* <ListausPelaajat />  */}
+                            <SocketBox sana={this.state.randomWord} />
+                            <SketchBox />
+                            {/* <SocketBox sana={this.state.randomWord} /> */}
+                            <ListausPelaajat />
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
+                        </div>
                     </div>
-                    {/* <section id="arvattavasana">
-                        <p>Klikkaa nappia ja ryhdy piirtämään {'\n'}</p>
-                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Arvo sana</Button>
-                        <ArvattavaSana sana2={this.state.randomWord} />
-                    </section> */}
                 </div>
-            </div>
-        )
+            )
+        } else {
+            //muille pelaajille tämä näkymä:
+            return (
+
+                <div id="parentbox">
+                    <nav>
+                        {/* <NavBar randomWord={this.state.randomWord} /> */}
+                    </nav>
+                    {/* <div onSubmit={this.handleSubmit}>
+                        <div className="container"> */}
+                    {/* <ListausPelaajat />  */}
+                    <SocketBox sana={this.state.randomWord} />
+                    <SketchBox />
+                    {/* <SocketBox sana={this.state.randomWord} /> */}
+                    <ListausPelaajat />
+                    {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
+                </div>
+            )
+        }
+
     }
 }
 
