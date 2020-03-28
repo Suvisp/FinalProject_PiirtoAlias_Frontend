@@ -11,7 +11,6 @@ export default class SocketBox extends Component {
             chatMessage: "",
             chatMessages: [],
             points: 0
-
         };
     }
 
@@ -49,19 +48,17 @@ export default class SocketBox extends Component {
 
     render() {
         const chatMessages = this.state.chatMessages.map(chatMessage => <p key={chatMessage}>{chatMessage}</p>) //mäpätään chatMessages ja luodaan taulukon jokaisesta
-        const inputProps = { fullwidth: "true" };
         return (                                                                                                //itemistä <Text>- elementti
             <div id="socketbox">
                 <div id="keskustelu">
                     {chatMessages}
                 </div>
                 <div id="viestitys">
-                    <hr />
-                    <TextField inputProps={inputProps} id="filled-basic" label="viestisi..." variant="filled" value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
+                    <TextField id="filled-basic" label="viestisi..." variant="filled" value={this.state.chatMessage} //voidaan lähettää viesti esim enteriä painamalla
                         onChange={e => { this.setState({ chatMessage: e.target.value }); }} /> 
                         {/* //muutetaan chatMessagen steittiä sitä mukaan, kun kirjoitetaan */}
                     <Button variant="contained" color="primary" id="sending" onClick={() => this.submitChatMessage()}>Lähetä</Button>
-                    <Button variant="contained" color="primary" type="scores" id="scores" value="Scores:">Pisteeni: 0 </Button>
+                    <div id="scores" value="Scores:">PISTEENI: 0 </div>
                 </div>
                 
             </div>
