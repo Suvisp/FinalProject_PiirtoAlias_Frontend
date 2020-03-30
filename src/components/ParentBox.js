@@ -60,7 +60,6 @@ export default class ParentBox extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }
