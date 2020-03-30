@@ -11,7 +11,6 @@ export default class SocketBox extends Component {
             chatMessage: "",
             chatMessages: [],
             points: 0
-
         };
     }
 

@@ -1,10 +1,9 @@
 import NavBar from "./NavBar";
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import SocketBox from './SocketBox'
 import SketchBox from './SketchBox'
 import ListausPelaajat from './ListausPelaajat'
-import ArvattavaSana from './ArvattavaSana'
+// import ArvattavaSana from './ArvattavaSana'
 import { getAllWords } from '../services/restClient'
 import Timer from './Timer';
 
@@ -15,15 +14,21 @@ export default class ParentBox extends React.Component {
             word: "",
             id: "",
             randomWord: "",
-            allWords: []
+            allWords: [],
+            // myTurnToDraw: true
         }
+
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     //hakee kaikki sanat tietokannasta
     componentDidMount = () => {
         getAllWords().then(allWords => {
+//             this.setState({ allWords }, () => {
+//                 this.handleSubmit();
+//             })
             this.setState({ allWords });
+
         }).catch(err => {
             console.error("Caught an error", err);
             this.setState({ error: err.message })
@@ -50,10 +55,11 @@ export default class ParentBox extends React.Component {
                         <SketchBox />
                         <SocketBox sana={this.state.randomWord} />
                         <ListausPelaajat />
+
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
+                        </div>
                     </div>
                 </div>
-
             </div>
         )
     }

@@ -19,9 +19,6 @@ header {
 
 /* ---------YLÄKOMPONENTIT----------- */
 
-#parentbox {
-  height: 100vh;
-}
 
 .container {
   display: flex;
@@ -36,18 +33,45 @@ header {
   width: 100%;
 }
 
+#toolit {
+  width: 100%;
+  margin-left: 5%;
+}
+
+#undobtn {
+  margin-left: 5px;
+}
+.swatches {
+  border: none;
+  width: 40px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+}
+#redbtn {
+background-color: red;
+}
+#greenbtn {
+  background-color: limegreen;
+}
+#bluebtn {
+  background-color: blue;
+}
+#yellowbtn {
+  background-color: yellow;
+}
+
 /* -----------SOCKET BOX-------------- */
 
 #socketbox {
-  width: 100vw;
-  overflow-x: hidden;
+  width: 95vw;
 }
 
 #keskustelu {
   background-color: whitesmoke;
   height: 150px;
   padding-top: 5px;
-  width: 90%;
+  width: 95%;
   margin-left: 5%;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -56,12 +80,12 @@ header {
 #viestitys {
   background-color: white;
   height: 10%;
-  width: 90%;
+  width: 95%;
   margin-left: 5%;
 }
 
 #filled-basic {
-  width: 86vw;
+  width: 85vw;
   margin-top: 15px;
   padding: 10px;
 }
@@ -87,6 +111,7 @@ header {
   width: 90vw;
   height: auto;
   margin-top: 15px;
+  margin-bottom: 15px;
   background-color: whitesmoke;
   border-radius: 5px;
   padding: 10px;
