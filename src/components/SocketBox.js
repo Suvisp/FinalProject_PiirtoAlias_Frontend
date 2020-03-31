@@ -3,6 +3,7 @@ import io from 'socket.io-client'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+const apiUrl = 'http://piirtoalias-ebenv.eba-aben5pj4.eu-central-1.elasticbeanstalk.com/'
 export default class SocketBox extends Component {
 
     constructor(props) {
@@ -15,7 +16,7 @@ export default class SocketBox extends Component {
     }
 
     componentDidMount() {
-        this.socket = io('http://localhost:3000/') //avataan socket-yhteys kun sivu komponentti on latautunut
+        this.socket = io(apiUrl) //avataan socket-yhteys kun sivu komponentti on latautunut
         this.socket.on("chat message", msg => {
             this.setState({ chatMessages: [...this.state.chatMessages, msg] }) //lisätään lähetetty viesti chatMessages-arrayhyn
         })
