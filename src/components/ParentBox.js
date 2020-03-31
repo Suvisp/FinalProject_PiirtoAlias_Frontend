@@ -28,7 +28,6 @@ export default class ParentBox extends React.Component {
 //                 this.handleSubmit();
 //             })
             this.setState({ allWords });
-
         }).catch(err => {
             console.error("Caught an error", err);
             this.setState({ error: err.message })
