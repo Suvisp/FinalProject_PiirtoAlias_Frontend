@@ -59,7 +59,6 @@ export default class ParentBox extends React.Component {
                             {/* <--tähän komp. chätissä olevat pelaajien tiedot kuten nimi ja pisteet */}
                         </div>
                     </div>
-                </div>
             </div>
         )
     }
