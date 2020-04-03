@@ -4,7 +4,7 @@ export default class ListausPelaajat extends Component {
     render() {
         return (
             <div id="listauspelaajat">
-                {/* {this.props.username} */} Nimet ja pisteet
+                {/* {this.props.username} */}
             </div>
         )
     }

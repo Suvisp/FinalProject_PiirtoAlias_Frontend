@@ -5,7 +5,7 @@ export default class SketchBox extends Component {
     render() {
         return (
             <div id="sketchbox">
-                <Piirtoalusta />
+                <Piirtoalusta/>
             </div>
         )
     }
